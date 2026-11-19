@@ -4,7 +4,7 @@ An open-source system for learning and retaining German vocabulary, developed by
 
 Vocabulary is represented as lexical units: meaning, grammatical forms and example usage. Individual review supports recall; companion sessions and sentence feedback provide opportunities to apply vocabulary. Core study runs locally, with optional account sync and consent-based community features.
 
-![German vocabulary recall in a repeat practice loop](./public/Loop.png)
+![Revealed German recall card with meaning, article, plural and example usage](./public/Recall.png)
 
 ## Learning model
 

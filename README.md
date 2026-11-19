@@ -6,7 +6,19 @@ Vocabulary is represented as lexical units: meaning, grammatical forms and examp
 
 ![Revealed German recall card with meaning, article, plural and example usage](./public/Recall.png)
 
+I needed to learn German for work, but I had postponed studying until the time available was short. My target was B1 in roughly 100 days, starting from zero. I needed a systematic way to practise alongside my coursework.
+
+After trying other platforms, I made [vhs-Lernportal](https://www.vhs-lernportal.de/) my primary course platform. It fits the way I learn and provides the structure I need. Deutsch began with a complementary problem: how to retain the vocabulary I encounter in those lessons and make it available when I need to use it.
+
+The implementation follows that problem closely. Recall comes before the answer is revealed. Review schedules bring vocabulary back across study sessions. Articles, plurals and examples keep words connected to their grammatical forms and usage. Companion review and sentence feedback provide opportunities to retrieve and apply vocabulary with another learner.
+
+Deutsch is built around how I think and learn, informed by research on retrieval and distributed practice, and refined through my own use. I am sharing a system that is helping me structure that work. The B1 timeline is my personal constraint, not an outcome the software can guarantee.
+
 ## Learning model
+
+Research on foreign-language vocabulary has found that repeated retrieval can improve delayed recall. Research on distributed practice also shows that the spacing between study sessions interacts with the intended retention period. These findings inform the recall-and-review loop. See [Karpicke and Roediger (2008)](https://pubmed.ncbi.nlm.nih.gov/18276894/) and [Cepeda et al. (2006)](https://pubmed.ncbi.nlm.nih.gov/16719566/).
+
+The implementation makes these mechanisms explicit and inspectable. Its review intervals and practice defaults remain engineering heuristics; the research does not establish them as an optimal configuration or validate this application as a route to B1.
 
 Four practice modes separate introduction, recall, production and recognition:
 

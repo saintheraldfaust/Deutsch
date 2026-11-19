@@ -4,7 +4,7 @@ An open-source system for learning and retaining German vocabulary, developed by
 
 Vocabulary is represented as lexical units: meaning, grammatical forms and example usage. Individual review supports recall; companion sessions and sentence feedback provide opportunities to apply vocabulary. Core study runs locally, with optional account sync and consent-based community features.
 
-![Deutsch Daily Deck showing a vocabulary card](./public/Deck.PNG)
+![German vocabulary recall in a repeat practice loop](./public/Loop.png)
 
 ## Learning model
 
@@ -24,6 +24,8 @@ The initial mode is Recall when locally stored reviews are due, otherwise Learn 
 **Goal & pace** configures daily allowances and review limits. Activity records participation in practice, not mastery. Optional study pauses default to 60 seconds after three distinct words are added to reviews or reviewed. **App settings** supports intervals of 3, 5 or 10 words and pauses of 30 seconds, 60 seconds or 2 minutes. Pauses can be skipped or disabled; these defaults are adjustable heuristics.
 
 The system complements language instruction. It is not a complete course or an official vhs-Lernportal product. Its learning model prioritizes recall and contextual use without streak pressure or public rankings.
+
+![Vocabulary study with word lookup and Goal & pace controls](./public/Db-TFRI.png)
 
 ## Collaborative practice
 
@@ -48,6 +50,8 @@ Group content is separate from private chat and visible to members. Owners manag
 External links remain visible with a warning. A limited English/German abuse list holds matching messages, edits, word cards and suggestions for human review. Moderators can restore false positives. The filter can miss abuse or misinterpret quoted vocabulary; reporting remains available. Private companion messages are not subject to this filter.
 
 Conversations receive live updates when connected. Recent history can be stored on the device and displayed immediately while the server checks for updates. Connection failures preserve cached history; first visits, expired caches and cleared storage can require an initial download. Up to 20 pending messages can be retained for 24 hours. Unconfirmed messages require an explicit retry after reload.
+
+![Group vocabulary sharing with the personal activity calendar open](./public/Peer.png)
 
 ## Vocabulary and language tools
 

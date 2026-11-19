@@ -1,4 +1,4 @@
-# Deutsch Daily Deck
+# Deutsch by TFRI
 
 An open-source system for learning and retaining German vocabulary, developed by The Faust Research Institute (TFRI). It combines active recall, deterministic spaced repetition and peer-assisted practice, connecting individual study with language use in context.
 

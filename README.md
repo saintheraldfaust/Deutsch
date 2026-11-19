@@ -14,6 +14,10 @@ The implementation follows that problem closely. Recall comes before the answer 
 
 Deutsch is built around how I think and learn, informed by research on retrieval and distributed practice, and refined through my own use. I am sharing a system that is helping me structure that work. The B1 timeline is my personal constraint, not an outcome the software can guarantee.
 
+I am sharing Deutsch as a starting point for others to adapt. Fork it, change the interface, adjust the practice modes or review logic, and shape it around how you learn. The current design reflects my needs; your experience can inform a different implementation. Make those choices explicit, test their effects, and keep refining what supports your learning.
+
+German is the starting point. I expect this work to develop into separate applications for other languages, sharing the underlying approach while accounting for each language’s grammar, vocabulary and usage. That is a future direction, with the German implementation as the current focus.
+
 ## Learning model
 
 Research on foreign-language vocabulary has found that repeated retrieval can improve delayed recall. Research on distributed practice also shows that the spacing between study sessions interacts with the intended retention period. These findings inform the recall-and-review loop. See [Karpicke and Roediger (2008)](https://pubmed.ncbi.nlm.nih.gov/18276894/) and [Cepeda et al. (2006)](https://pubmed.ncbi.nlm.nih.gov/16719566/).

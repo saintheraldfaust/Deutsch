@@ -3,7 +3,7 @@ import { WordLookupContext as Context } from './wordLookupContext'
 import { loadDictionary } from './dictionaryLoader'
 import { lookupEnglish, type Dictionary } from './dictionaryLookup'
 import { distinctWordSenses, germanLookup } from './lookupResults'
-import { findMeaning, indexMeanings, normalizeWord, stripArticle, type WordEntry } from './wordLookup'
+import { createKnownWordLookup, findMeaning, indexMeanings, normalizeWord, type WordEntry } from './wordLookup'
 import { loadStarterPack, type StarterPack } from './starterDeck'
 
 export function useWordLookup(word: string | null) {
@@ -29,6 +29,7 @@ export function useWordLookup(word: string | null) {
     id: card.id, source: 'deck', prompt: card.prompt, meaning: card.meaning, category: card.category,
     plural: card.plural, example: card.example, translation: card.translation,
   })), [context.cards])
+  const isKnown = useMemo(() => createKnownWordLookup(personal), [personal])
   const starter = useMemo(() => (starterPack?.cards ?? []).map((card): WordEntry => ({
     id: card.id, source: 'starter', prompt: card.article ? `${card.article} ${card.word}` : card.word,
     meaning: card.meaning, category: card.category, plural: card.plural, example: card.example,
@@ -47,5 +48,5 @@ export function useWordLookup(word: string | null) {
     return original ? context.onAddStarter(original) : context.onAdd(entry)
   }
   return { german, english, loading: loading || (enabled && !dictionary && !starterPack && !failed), unavailable: failed, retry: () => setAttempt((value) => value + 1), inDeck, onAdd,
-    isKnown: (value: string) => personal.some((entry) => normalizeWord(stripArticle(entry.prompt)) === normalizeWord(value)) }
+    isKnown }
 }

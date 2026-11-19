@@ -1,9 +1,26 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { englishVariants, findMeaning, findWord, glossKeys, indexMeanings, indexWords, splitMessage } from '../src/wordLookup.ts'
+import { createKnownWordLookup, englishVariants, findMeaning, findWord, glossKeys, indexMeanings, indexWords, splitMessage } from '../src/wordLookup.ts'
 
 const entry = (id, prompt, meaning, overrides = {}) => ({
   id, source: 'deck', prompt, meaning, category: 'noun', ...overrides,
+})
+
+test('chat highlighting reuses its deck index for repeated known and unknown tokens', () => {
+  let deckReads = 0
+  const entries = Array.from({ length: 2600 }, (_, index) => ({
+    get prompt() { deckReads += 1; return index === 0 ? 'der Käse' : `das Wort${index}` },
+  }))
+  const isKnown = createKnownWordLookup(entries)
+  assert.equal(deckReads, entries.length)
+  for (let index = 0; index < 1000; index += 1) {
+    assert.equal(isKnown('KA\u0308SE'), true)
+    assert.equal(isKnown('unbekannt'), false)
+  }
+  assert.equal(deckReads, entries.length, 'message updates must not rescan vocabulary')
+  assert.equal(isKnown('der'), false)
+  assert.equal(isKnown('Käsen'), false, 'do not guess inflections for highlighting')
+  assert.equal(createKnownWordLookup([])('Käse'), false)
 })
 
 test('messages split into words and the text between them', () => {

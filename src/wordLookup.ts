@@ -24,6 +24,12 @@ export const normalizeWord = (word: string) => word.normalize('NFC').toLocaleLow
 
 export const stripArticle = (value: string) => value.trim().replace(/^(der|die|das)\s+/i, '')
 
+// Build once per deck change, rather than scanning the deck for every chat token.
+export const createKnownWordLookup = (entries: Pick<WordEntry, 'prompt'>[]) => {
+  const words = new Set(entries.map((entry) => normalizeWord(stripArticle(entry.prompt))))
+  return (word: string) => words.has(normalizeWord(word))
+}
+
 export const splitMessage = (text: string): MessagePart[] =>
   text.split(wordPattern).filter(Boolean).map((part) => ({ text: part, word: singleWord.test(part) }))
 

@@ -57,7 +57,7 @@ Tap a German example word in Learn or a revealed review, or a word in chat, to c
 
 ## Your data and choices
 
-- Core study works locally without an account. Two open tabs preserve changes to different words; if both change the same word, refresh before saving. A failed save keeps the current study action pending. After an online visit has cached the app and vocabulary, you can study offline. Community and account sync need a connection.
+- Core study works locally without an account. Two open tabs preserve changes to different words; if both change the same word, refresh before saving. A failed save keeps the current study action pending. After an online visit has cached the app and vocabulary, you can study offline. Community and account sync need a connection. Private and group chats highlight words from your active vocabulary.
 - An optional account syncs your deck and goal across devices. New accounts require email verification; password recovery uses a time-limited email code.
 - Download backups regularly. Clearing browser data can remove local progress. Backups preserve review state; importing is additive and does not overwrite existing cards.
 - Private and group messages are stored on the account server. They are never sent to an AI or translation service. Word lookup runs locally; external dictionary links open only when selected.

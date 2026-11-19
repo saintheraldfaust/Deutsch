@@ -1,76 +1,82 @@
 # Deutsch Daily Deck
 
-A calm German vocabulary trainer for words you want to use. Capture vocabulary from your course or daily life, organize it by lesson, and practise recalling it over time.
+An open-source system for learning and retaining German vocabulary, developed by The Faust Research Institute (TFRI). It combines active recall, deterministic spaced repetition and peer-assisted practice, connecting individual study with language use in context.
 
-Study independently, ask a companion to review with you, or use a group to try vocabulary in conversation. The goal is durable, usable vocabulary, with no streak pressure, rankings or required social activity. Deutsch Deck complements instruction; it is not a complete language course or an official vhs-Lernportal product.
+Vocabulary is represented as lexical units: meaning, grammatical forms and example usage. Individual review supports recall; companion sessions and sentence feedback provide opportunities to apply vocabulary. Core study runs locally, with optional account sync and consent-based community features.
 
 ![Deutsch Daily Deck showing a vocabulary card](./public/Deck.PNG)
 
-## Learn, recall, use
+## Learning model
 
-- **Learn:** explore a word with its meaning and a natural example. Nouns include their article and plural where available. Missing forms are marked as unrecorded; checked dictionary suggestions can be saved explicitly, while verified usually-singular or usually-plural cases are identified. Save a word for later or add it to reviews when ready.
-- **Recall:** try to remember before revealing the answer, then rate how it went. Due reviews take priority and each rating shows when the word will return.
-- **Produce:** recall the saved German word from its meaning and example context, including the article for nouns. If another saved translation fits, choose whether to save it as an accepted answer before it is graded.
-- **Choose:** recognize the German word from four distinct options. Known overlapping meanings and accepted alternatives are excluded from distractors. Recognition, typed production and self-rated recall have separate results. Correct Produce and Choose answers schedule as Hard; misses schedule as Again.
+Four practice modes separate introduction, recall, production and recognition:
 
-Correct scheduled quiz answers gradually lengthen review intervals without treating success as difficulty. These intervals are a heuristic, not a measure of mastery.
+- **Learn** introduces vocabulary through meanings, grammatical forms and contextual examples. Nouns include articles and available plural forms. Missing forms remain explicitly unrecorded; verified dictionary suggestions can be saved. Words can be saved for later study or added to scheduled reviews.
+- **Recall** presents a retrieval prompt before revealing the answer. Learners rate their recall and see the resulting review interval.
+- **Produce** requests the saved German expression from its meaning and example context, including noun articles. Alternative translations can be explicitly accepted before grading.
+- **Choose** presents four distinct German options. Known overlapping meanings and accepted alternatives are excluded from distractors.
 
-Adding a word to reviews schedules its first review **10 minutes later**. First reviews and Again retries use elapsed minutes, including across clock changes. Longer intervals follow local calendar days. The study area shows the next review time and a word count without previewing answers. You can repeat today's words without changing their schedules.
+Mode outcomes remain distinct. Correct Produce and Choose responses use **Hard** scheduling; misses use **Again**. Successful scheduled quiz responses progressively extend intervals. Scheduling is heuristic and does not establish mastery or language proficiency.
 
-The app opens Recall when locally saved reviews are due, otherwise Learn when unseen words remain. It keeps your chosen mode during a visit. **Tune session** lets you choose a study set, inspect reviewed words or reset progress with confirmation.
+Adding vocabulary to reviews schedules its first review **10 minutes later**. First reviews and Again retries use elapsed minutes; longer intervals follow local calendar days. The study area displays the next review time and word count without exposing answers. Repeating today's words leaves their schedules unchanged.
 
-**Goal & pace** helps you choose a daily allowance and review limit. These support planning, not a prediction of language proficiency. Activity records words practised, not mastery. Optional study pauses default to 60 seconds after three distinct words added to reviews or reviewed. Under **App settings**, choose 3, 5 or 10 words and 30 seconds, 60 seconds or 2 minutes, skip a pause, or turn them off. These are adjustable starting points, not established optimal intervals.
+The initial mode is Recall when locally stored reviews are due, otherwise Learn when unseen vocabulary remains. Reviews becoming due or progress syncing do not automatically change the selected mode during a visit. **Tune session** provides study-set filters, review history and confirmed progress resets.
 
-## Learn with others
+**Goal & pace** configures daily allowances and review limits. Activity records participation in practice, not mastery. Optional study pauses default to 60 seconds after three distinct words are added to reviews or reviewed. **App settings** supports intervals of 3, 5 or 10 words and pauses of 30 seconds, 60 seconds or 2 minutes. Pauses can be skipped or disabled; these defaults are adjustable heuristics.
 
-Community is optional and requires a verified account. Connect by username and mutual consent; your email and wider study progress stay private.
+The system complements language instruction. It is not a complete course or an official vhs-Lernportal product. Its learning model prioritizes recall and contextual use without streak pressure or public rankings.
+
+## Collaborative practice
+
+Community participation is optional and requires a verified account. Companion connections use usernames and mutual consent. Email addresses and wider study progress remain private.
 
 ### Companions
 
-Chat privately, share a word, look up vocabulary, and offer kind sentence feedback. A learner chooses whether to save a shared word or suggested sentence to their own deck.
+Private conversations support vocabulary sharing, local word lookup and optional sentence feedback. Shared vocabulary and suggested sentences enter a learner's deck only through an explicit save.
 
-**Review together** lets a companion help you recall five randomly selected words you have already reviewed, optionally from one lesson or topic. The review deck replaces chat until the session ends. Type the English meaning; your companion can mark it correct, invite another attempt, or reveal the full word details. You can ask for a reveal at any point before the answer is shown, and either learner can end the session.
+**Review together** samples five previously reviewed words, optionally restricted to a lesson or topic. A card deck temporarily replaces the conversation history. The learner submits an English meaning; the companion can confirm it, request another attempt or reveal the complete lexical unit. The learner can request a reveal, and either participant can end the session.
 
-A highlighted **Review** message records that session's first-try recall, recall after retry and revealed answers. These are companion-marked outcomes. They do not change individual review schedules, activity or deck scores, and do not claim mastery.
+A highlighted **Review** message summarizes first-attempt recall, recall after retry and revealed answers. These companion-marked outcomes remain separate from individual review schedules, activity and deck scores.
 
 ### Groups
 
-Use groups to ask vocabulary questions, try words in your own sentences, and discuss specific feedback. Members can share word cards, reply, look up words, suggest edits and save useful vocabulary or corrected sentences to their own decks. Group discussion supports later individual practice; posting and reactions do not count as learning progress.
+Opt-in groups support vocabulary questions, sentence production and specific feedback. Members can share word cards, look up terms, suggest revisions and explicitly save vocabulary or corrected sentences.
 
-Groups are separate from private chat. Joining is explicit and posts are visible to members. Owners can manage membership and messages; members can report messages and suggestions. There are posting limits, shared rules and moderation. Group reviews do not expose anyone's private deck, scores or study history.
+**Use this word** turns a shared card into a German sentence prompt. **Revise** links a subsequent attempt to the original; **Save sentence** requires an English meaning before adding it to the learner's deck. Group participation and feedback do not schedule reviews or grade vocabulary.
 
-External links stay visible with a warning. A small English/German abuse list holds matching new messages, edits, word cards and suggestions for human review. Members see a neutral placeholder; moderators can restore a false positive. This limited check can miss abuse and misread quoted vocabulary, so reporting remains available. It does not filter private companion chats.
+Group content is separate from private chat and visible to members. Owners manage membership and messages; members can report content and suggestions. Posting limits, shared rules and a moderation queue constrain misuse without exposing private decks, scores or study history.
 
-Choose **Use this word** on a shared group word card to write a German sentence. Members can offer optional sentence feedback. **Revise** posts a follow-up linked to your attempt; **Save sentence** asks for an English meaning before adding it to your own deck. Saving does not schedule a review, and group feedback does not score or grade your vocabulary.
+External links remain visible with a warning. A limited English/German abuse list holds matching messages, edits, word cards and suggestions for human review. Moderators can restore false positives. The filter can miss abuse or misinterpret quoted vocabulary; reporting remains available. Private companion messages are not subject to this filter.
 
-Chat updates arrive live when connected. Recently opened conversations can be saved on this device for faster reopening; the app checks them with the server when opened. Use companion tools to turn off **Save recent chats on this device** on a shared device. Up to 20 pending messages can also be kept for 24 hours. After reload, unconfirmed messages wait for an explicit retry. Signing out clears that account's saved chat copies and pending messages.
+Conversations receive live updates when connected. Recent history can be stored on the device and displayed immediately while the server checks for updates. Connection failures preserve cached history; first visits, expired caches and cleared storage can require an initial download. Up to 20 pending messages can be retained for 24 hours. Unconfirmed messages require an explicit retry after reload.
 
-Reopening a saved chat shows its recent history while updates arrive in the background. Temporary connection failures keep that history visible. A first visit, expired cache or cleared storage can still need an initial download.
+## Vocabulary and language tools
 
-## Make the vocabulary yours
+New installations include **2,593 starter cards** covering core vocabulary and ten themes. Source-supplied A1/A2 labels and examples are not independently verified and can contain errors. Existing decks are preserved.
 
-Fresh installs include **2,593 starter cards** across core vocabulary and ten themes. Source-supplied A1/A2 labels and examples can contain errors and are not independently verified. Existing decks are preserved.
+**Add a word** captures personal vocabulary with a meaning and German example; nouns require an article. Lesson and topic tags define study sets. Accepted German alternatives preserve explicit wording choices, including noun articles. [CSV](./public/deck-template.csv) and [JSON](./public/deck-template.json) templates support larger imports through **Import vocabulary or backup**. Newly imported vocabulary starts without review history; imports skip duplicates and preserve existing cards. Imported content requires accuracy review.
 
-Use **Add a word** for your own vocabulary. Include a clear meaning and a natural German example; nouns require an article. Lesson and topic tags create study sets. Optional accepted German answers let you define alternative wording, with noun articles included. For larger sets, use the [CSV template](./public/deck-template.csv) or [JSON template](./public/deck-template.json), then choose **Import vocabulary or backup**. Vocabulary imports start fresh, skip duplicates and leave existing cards intact. Review imported content for accuracy.
+Word lookup is available in German examples during Learn, revealed reviews and chat. It searches personal vocabulary, starter content and a separately loaded dictionary. Multiple senses remain selectable, saved examples retain their context, and verified inflections can resolve to personal vocabulary. Dictionary glosses are context-free and coverage is incomplete. Adding a dictionary entry requires an example sentence. Private and group chats highlight words from active vocabulary.
 
-Tap a German example word in Learn or a revealed review, or a word in chat, to check your deck, starter vocabulary and the bundled dictionary. Choose between meanings when a word has several senses. Saved examples stay available in lookup, verified inflections lead back to personal vocabulary, and failed downloads can be retried. Dictionary glosses are short and may miss context. Adding a dictionary word requires an example sentence. **Listen** has open human recordings matched to every word in the current starter set. Custom words use a local German voice where available. Recordings play only when selected and show their source, author and license. Browser voices that load later are detected; an online browser voice requires a separate explicit choice.
+**Listen** provides attributed human recordings matched to every headword in the current starter set. Matching does not guarantee the appropriate pronunciation for every homograph. Custom vocabulary uses a local German voice where available. Recordings load only on request and identify their author, source and license. Remote browser speech requires a separate explicit choice.
 
-## Your data and choices
+An optional **offline German voice preview** is available through App settings or a study card. Its approximately **77 MB** download synthesizes speech on the device without sending study text to a speech service. Desktop offline checks pass; physical iOS and Android verification remains outstanding. Synthesized pronunciation can be imperfect, and browser storage can be reclaimed.
 
-- Core study works locally without an account. Two open tabs preserve changes to different words; if both change the same word, refresh before saving. A failed save keeps the current study action pending. After an online visit has cached the app and vocabulary, you can study offline. Community and account sync need a connection. Private and group chats highlight words from your active vocabulary.
-- An optional account syncs your deck and goal across devices. New accounts require email verification; password recovery uses a time-limited email code.
-- Download backups regularly. Clearing browser data can remove local progress. Backups preserve review state; importing is additive and does not overwrite existing cards.
-- Private and group messages are stored on the account server. They are never sent to an AI or translation service. Word lookup runs locally; external dictionary links open only when selected.
-- Saved chat copies can briefly be stale and are not protected from other people using the same browser profile. The app keeps bounded recent copies and clears them on sign-out or account change.
-- Blocking ends a companion connection. Reporting, leaving groups and notification preferences stay under your control. Optional account and companion emails use Mailjet.
+## Local data and privacy
 
-See [privacy and operational details](./CONTRIBUTING.md#privacy-and-service-limits) for cache limits, retention, account recovery and email handling.
+- **Local study:** core practice requires no account. Offline study is available after the app and vocabulary have been cached during an online visit. Concurrent tabs preserve changes to different words; conflicting edits to one word require a refresh. Failed persistence keeps the study action pending.
+- **Optional sync:** an account synchronizes vocabulary and goals across devices. New accounts require email verification; password recovery uses time-limited codes. Sync and community services require a connection.
+- **Data recovery:** backups preserve review state. Imports are additive by default. Clearing browser data can remove local progress, so external backups remain necessary.
+- **Message handling:** private and group messages reside on the account server and are never sent to an AI or translation service. Word lookup runs locally; external dictionary links open only on request.
+- **Device storage:** recent chat copies can be stale and accessible to other people using the same browser profile. **Save recent chats on this device** can be disabled in companion tools. Signing out or changing accounts clears saved chat copies and pending messages.
+- **Consent and controls:** blocking ends a companion connection. Reporting, group membership and notification preferences remain under learner control. Optional account and companion emails use Mailjet.
 
-## Questions and feedback
+[Privacy and operational details](./CONTRIBUTING.md#privacy-and-service-limits) document cache limits, retention, account recovery and email handling.
 
-Visit the [Deutsch community Q&A](https://github.com/Dustymaterial/Deutsch-community/discussions/categories/q-a) for help using the app, or [discuss a product idea](https://github.com/Dustymaterial/Deutsch-community/discussions/categories/ideas). Report reproducible bugs and track development in [this repository's issues](https://github.com/saintheraldfaust/Deutsch/issues). Public discussions are separate from private in-app companion chats.
+## Discussion and feedback
 
-## Run locally or contribute
+The [community Q&A](https://github.com/Dustymaterial/Deutsch-community/discussions/categories/q-a) covers product usage and learning behavior. [Ideas discussions](https://github.com/Dustymaterial/Deutsch-community/discussions/categories/ideas) support product proposals; [repository issues](https://github.com/saintheraldfaust/Deutsch/issues) track reproducible defects and implementation work. Public discussions are separate from private in-app conversations.
+
+## Development
 
 Requires Node.js 22.12 or newer.
 
@@ -79,8 +85,10 @@ npm install
 npm run dev
 ```
 
-Open the URL printed by Vite. Local study works without server credentials. See [CONTRIBUTING.md](./CONTRIBUTING.md) for account setup, deployment, scheduling rules and checks, and [AGENTS.md](./AGENTS.md) for product and engineering guidance.
+Open the URL printed by Vite. Local study requires no server credentials. [CONTRIBUTING.md](./CONTRIBUTING.md) covers account setup, deployment and validation. [AGENTS.md](./AGENTS.md) defines product and engineering constraints.
 
-## Sources and license
+## Licensing and sources
 
-The app code is [MIT licensed](./LICENSE). The separate [optional voice package](./optional/german-voice/README.md) is GPL-3.0-or-later. An opt-in preview is available from App settings or Offline voice on a study card. Its roughly 77 MB download runs on the device without sending study text to a speech service. Desktop offline tests pass; iOS and Android verification remains outstanding. The adapted starter vocabulary and dictionary are separate **CC BY-SA 4.0** works derived from Wiktionary, Kaikki/Wiktextract and the slovymovy word lists. Human audio has its own attribution and license. See [DATA_SOURCES.md](./DATA_SOURCES.md) for sources, modifications and limitations.
+Application code is [MIT licensed](./LICENSE). The separate [offline voice component](./optional/german-voice/README.md) is GPL-3.0-or-later and retains its own source and model provenance.
+
+The adapted starter vocabulary and dictionary are separate **CC BY-SA 4.0** works derived from Wiktionary, Kaikki/Wiktextract and the slovymovy word lists. Human recordings retain their individual attribution and licenses. [DATA_SOURCES.md](./DATA_SOURCES.md) documents sources, modifications and coverage limitations.
